@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350976511E96FB0600A3664D /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350976501E96FB0600A3664D /* Auth.swift */; };
+		350976531E971F2D00A3664D /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350976521E971F2D00A3664D /* AuthVC.swift */; };
+		350976551E9721F800A3664D /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350976541E9721F800A3664D /* TestVC.swift */; };
 		35EE3E231E95841600618D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE3E221E95841600618D6E /* AppDelegate.swift */; };
-		35EE3E251E95841600618D6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE3E241E95841600618D6E /* ViewController.swift */; };
 		35EE3E281E95841600618D6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE3E261E95841600618D6E /* Main.storyboard */; };
 		35EE3E2A1E95841600618D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EE3E291E95841600618D6E /* Assets.xcassets */; };
 		35EE3E2D1E95841600618D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EE3E2B1E95841600618D6E /* LaunchScreen.storyboard */; };
+		35EE3E391E95846C00618D6E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE3E381E95846C00618D6E /* Constants.swift */; };
+		6FC8A0394731DD137653EE2D /* Pods_MasterDash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D297FD0DE0213A35D4F60C /* Pods_MasterDash.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		350976501E96FB0600A3664D /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		350976521E971F2D00A3664D /* AuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		350976541E9721F800A3664D /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		35EE3E1F1E95841600618D6E /* MasterDash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterDash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE3E221E95841600618D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35EE3E241E95841600618D6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35EE3E271E95841600618D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35EE3E291E95841600618D6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35EE3E2C1E95841600618D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35EE3E2E1E95841600618D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35EE3E381E95846C00618D6E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		647599EA07403779E29B85FB /* Pods-MasterDash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterDash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasterDash/Pods-MasterDash.debug.xcconfig"; sourceTree = "<group>"; };
+		673C72C19133361D0AB46D2C /* Pods-MasterDash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterDash.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasterDash/Pods-MasterDash.release.xcconfig"; sourceTree = "<group>"; };
+		E7D297FD0DE0213A35D4F60C /* Pods_MasterDash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasterDash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC8A0394731DD137653EE2D /* Pods_MasterDash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				35EE3E211E95841600618D6E /* MasterDash */,
 				35EE3E201E95841600618D6E /* Products */,
+				E16E934C878F4FB996730E50 /* Pods */,
+				AE0BE1A667B82B820C87D388 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +67,66 @@
 		35EE3E211E95841600618D6E /* MasterDash */ = {
 			isa = PBXGroup;
 			children = (
-				35EE3E221E95841600618D6E /* AppDelegate.swift */,
-				35EE3E241E95841600618D6E /* ViewController.swift */,
-				35EE3E261E95841600618D6E /* Main.storyboard */,
-				35EE3E291E95841600618D6E /* Assets.xcassets */,
-				35EE3E2B1E95841600618D6E /* LaunchScreen.storyboard */,
+				35EE3E361E95842B00618D6E /* Model */,
+				35EE3E351E95842800618D6E /* View */,
+				35EE3E341E95842000618D6E /* Controller */,
+				35EE3E371E95844000618D6E /* References */,
 				35EE3E2E1E95841600618D6E /* Info.plist */,
 			);
 			path = MasterDash;
+			sourceTree = "<group>";
+		};
+		35EE3E341E95842000618D6E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				350976521E971F2D00A3664D /* AuthVC.swift */,
+				350976541E9721F800A3664D /* TestVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		35EE3E351E95842800618D6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35EE3E2B1E95841600618D6E /* LaunchScreen.storyboard */,
+				35EE3E261E95841600618D6E /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		35EE3E361E95842B00618D6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35EE3E221E95841600618D6E /* AppDelegate.swift */,
+				350976501E96FB0600A3664D /* Auth.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		35EE3E371E95844000618D6E /* References */ = {
+			isa = PBXGroup;
+			children = (
+				35EE3E291E95841600618D6E /* Assets.xcassets */,
+				35EE3E381E95846C00618D6E /* Constants.swift */,
+			);
+			name = References;
+			sourceTree = "<group>";
+		};
+		AE0BE1A667B82B820C87D388 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7D297FD0DE0213A35D4F60C /* Pods_MasterDash.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E16E934C878F4FB996730E50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				647599EA07403779E29B85FB /* Pods-MasterDash.debug.xcconfig */,
+				673C72C19133361D0AB46D2C /* Pods-MasterDash.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35EE3E311E95841600618D6E /* Build configuration list for PBXNativeTarget "MasterDash" */;
 			buildPhases = (
+				A542BBCA06CF2726408B7859 /* [CP] Check Pods Manifest.lock */,
 				35EE3E1B1E95841600618D6E /* Sources */,
 				35EE3E1C1E95841600618D6E /* Frameworks */,
 				35EE3E1D1E95841600618D6E /* Resources */,
+				C795837EAAC17D7D833E8C33 /* [CP] Embed Pods Frameworks */,
+				65307C8D6AED6021EE6C6B89 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +165,7 @@
 					35EE3E1E1E95841600618D6E = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = CJ5D95MN34;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,13 +201,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65307C8D6AED6021EE6C6B89 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MasterDash/Pods-MasterDash-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A542BBCA06CF2726408B7859 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C795837EAAC17D7D833E8C33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MasterDash/Pods-MasterDash-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		35EE3E1B1E95841600618D6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35EE3E251E95841600618D6E /* ViewController.swift in Sources */,
+				350976551E9721F800A3664D /* TestVC.swift in Sources */,
+				350976511E96FB0600A3664D /* Auth.swift in Sources */,
 				35EE3E231E95841600618D6E /* AppDelegate.swift in Sources */,
+				35EE3E391E95846C00618D6E /* Constants.swift in Sources */,
+				350976531E971F2D00A3664D /* AuthVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,26 +381,35 @@
 		};
 		35EE3E321E95841600618D6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 647599EA07403779E29B85FB /* Pods-MasterDash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = CJ5D95MN34;
 				INFOPLIST_FILE = MasterDash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GlitchEclipse.MasterDash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		35EE3E331E95841600618D6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 673C72C19133361D0AB46D2C /* Pods-MasterDash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = CJ5D95MN34;
 				INFOPLIST_FILE = MasterDash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GlitchEclipse.MasterDash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -304,6 +433,7 @@
 				35EE3E331E95841600618D6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
