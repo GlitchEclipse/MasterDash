@@ -6,41 +6,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TestVC-->
-        <scene sceneID="IgC-l8-QLm">
-            <objects>
-                <viewController id="hu3-Uj-msB" customClass="TestVC" customModule="MasterDash" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AKm-BQ-ON6"/>
-                        <viewControllerLayoutGuide type="bottom" id="008-rv-P4m"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vfC-o3-2VX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SH7-F4-oSt">
-                                <rect key="frame" x="67" y="163.5" width="240" height="340"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="9aJ-jk-QZG"/>
-                                    <constraint firstAttribute="height" constant="340" id="ITe-rX-IHb"/>
-                                </constraints>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="SH7-F4-oSt" firstAttribute="centerY" secondItem="vfC-o3-2VX" secondAttribute="centerY" id="8MQ-iw-Kb3"/>
-                            <constraint firstItem="SH7-F4-oSt" firstAttribute="centerX" secondItem="vfC-o3-2VX" secondAttribute="centerX" id="VfF-vR-B1K"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fSr-mj-9Js" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-93.599999999999994" y="25.637181409295355"/>
-        </scene>
         <!--AuthVC-->
         <scene sceneID="o1V-cP-U8c">
             <objects>
@@ -52,12 +21,104 @@
                     <view key="view" contentMode="scaleToFill" id="iBb-NS-3Py">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Hc-6v-x1c">
+                                <rect key="frame" x="65" y="270" width="230" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88Y-Wd-6Xa">
+                                <rect key="frame" x="65" y="339" width="230" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIB-9G-wat">
+                                <rect key="frame" x="65" y="247" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Krb-Ia-jSm">
+                                <rect key="frame" x="66" y="317" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD2-ey-DOF">
+                                <rect key="frame" x="66" y="384" width="229" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.97206693889999995" green="0.8077381253" blue="0.332172513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtn:" destination="5Fm-TT-iOV" eventType="touchUpInside" id="kyI-Kb-MTN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="masterdash" translatesAutoresizingMaskIntoConstraints="NO" id="Rcb-cu-D2R">
+                                <rect key="frame" x="38" y="45" width="299" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97206693889999995" green="0.8077381253" blue="0.332172513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordLbl" destination="Krb-Ia-jSm" id="HXd-59-8RH"/>
+                        <outlet property="passwordTxtFld" destination="88Y-Wd-6Xa" id="0bj-j3-6Ys"/>
+                        <outlet property="usernameLbl" destination="SIB-9G-wat" id="wOa-z6-TZC"/>
+                        <outlet property="usernameTxtFld" destination="6Hc-6v-x1c" id="A8z-ua-UsT"/>
+                        <segue destination="Ow0-a8-meR" kind="show" identifier="MainVC" id="0gx-VA-Vti"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLt-2D-t9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-777" y="26"/>
+            <point key="canvasLocation" x="-778.39999999999998" y="25.637181409295355"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="GAy-iT-Yn7">
+            <objects>
+                <viewController id="Ow0-a8-meR" customClass="MainVC" customModule="MasterDash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3hX-AC-Bhv"/>
+                        <viewControllerLayoutGuide type="bottom" id="97u-r8-Vq8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F9g-Rk-uQT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Patrick!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwU-Bj-oty">
+                                <rect key="frame" x="24" y="70" width="137.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GsD-Rq-loU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                <color key="textColor" red="0.97206693889999995" green="0.8077381253" blue="0.332172513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DwU-Bj-oty" firstAttribute="leading" secondItem="F9g-Rk-uQT" secondAttribute="leadingMargin" constant="8" id="XBp-qk-kP6"/>
+                            <constraint firstItem="DwU-Bj-oty" firstAttribute="top" secondItem="3hX-AC-Bhv" secondAttribute="bottom" constant="50" id="vml-mU-CDM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeLbl" destination="DwU-Bj-oty" id="BSh-gc-WFv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zv-3s-mmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8.8000000000000007" y="25.637181409295355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="masterdash" width="2286" height="665"/>
+    </resources>
 </document>
