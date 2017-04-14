@@ -26,7 +26,7 @@ class MainVC: UIViewController {
     
     func updateUI() {
         
-       welcomeLbl.text = profile.loginName
+       //welcomeLbl.text = profile.loginName
         
     }
     

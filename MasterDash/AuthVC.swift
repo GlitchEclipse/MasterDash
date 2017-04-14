@@ -52,20 +52,20 @@ class AuthVC: OAuthViewController {
 
   
     @IBAction func loginBtn(_ sender: Any) {
-        
-       
-        
-        if usernameTxtFld.text == "glitcheclipse" && passwordTxtFld.text == "glitch08" {
-            profile.doEtsyAuth()
-           
             
-           
-        } else {
-            let alert = UIAlertController(title: "Password Invalid", message: "You typed in the wrong shit!", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            if usernameTxtFld.text == "glitcheclipse" && passwordTxtFld.text == "glitch08" {
+                
+                profile.doEtsyAuth({
+                    
+                    self.moveToMainVC()
+                })
+                
+            } else {
+                let alert = UIAlertController(title: "Password Invalid", message: "You typed in the wrong shit!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
-    }
     
     func moveToMainVC() {
         
