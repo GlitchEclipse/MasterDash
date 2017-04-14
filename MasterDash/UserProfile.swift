@@ -74,15 +74,7 @@ class UserProfile   {
         }
          return self.country
     }
-    
-  
-    init(userID: String, firstName: String) {
-        
-        self._loginName = userID
-        self._firstName = firstName
-        
-        self._userProfileURL = "\(URL_BASE)\(USER_ID)/profile"
-    }
+
  
         
     let oauthSwift = OAuth1Swift(
@@ -125,10 +117,12 @@ class UserProfile   {
         let _ = oauthSwift.client.get( "\(URL_BASE)/users/\(USER_ID)/profile",
             success: { response in
                 
-                let jsonDict = try? response.jsonObject()
+                let jsonDict = self.convertToDictionary(text: response.string!)
+                
+                //let jsonDict = try? response.jsonObject()
                 print(jsonDict as Any)
                 
-                                if let dict = jsonDict as? Dictionary<String, AnyObject> {
+                                if let dict = jsonDict  {
                 
                                     if let loginName = dict["user_id"] as? String {
                                         self._loginName = loginName
@@ -178,6 +172,19 @@ class UserProfile   {
     
         
     }
+    
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
+    
+    
     
 
     

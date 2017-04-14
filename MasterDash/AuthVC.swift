@@ -20,12 +20,12 @@ class AuthVC: OAuthViewController {
     //Base Setup
     
    
-    var profile: UserProfile!
-    let userprofile = UserProfile(userID: "glitcheclipse", firstName: "Polo")
-    
-
+    let profile = UserProfile()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
         
         usernameTxtFld.text = "glitcheclipse"
         passwordTxtFld.text = "glitch08"
@@ -53,8 +53,10 @@ class AuthVC: OAuthViewController {
   
     @IBAction func loginBtn(_ sender: Any) {
         
+       
+        
         if usernameTxtFld.text == "glitcheclipse" && passwordTxtFld.text == "glitch08" {
-            userprofile.doEtsyAuth()
+            profile.doEtsyAuth()
            
             
            
