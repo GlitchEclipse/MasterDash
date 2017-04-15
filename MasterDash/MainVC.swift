@@ -14,19 +14,19 @@ class MainVC: UIViewController {
     
     var profile: UserProfile!
     
-   
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateUI()
         
+            self.updateUI()
+
     }
     
     func updateUI() {
         
-       //welcomeLbl.text = profile.loginName
+        welcomeLbl.text = UserProfile.instance.firstName
+        print("This code will be called")
         
     }
     

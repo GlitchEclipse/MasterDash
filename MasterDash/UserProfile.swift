@@ -23,6 +23,7 @@ class UserProfile   {
     private var _country: Int!
     private var _userProfileURL: String!
     private var _userImg: UIImage!
+
     
     var loginName: String {
         if _loginName == nil {
@@ -76,6 +77,8 @@ class UserProfile   {
         accessTokenUrl: "https://openapi.etsy.com/v2/oauth/access_token"
     )
     
+   
+    
     func doEtsyAuth(_ completed: @escaping DownloadComplete) {
         
         let _ = oauthSwift.authorize(
@@ -92,6 +95,7 @@ class UserProfile   {
     }
     
     func getEtsyAPIData(_ completed: @escaping DownloadComplete) {
+        
         
         let _ = oauthSwift.client.get( "\(URL_BASE)/users/\(USER_ID)/profile",
             success: { response in
@@ -157,6 +161,9 @@ class UserProfile   {
         })
         
     }
+    
+ 
+    
   
 }
 
