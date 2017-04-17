@@ -84,9 +84,14 @@ class UserProfile   {
         let _ = oauthSwift.authorize(
             withCallbackURL: URL(string: "MasterDash://oauth-callback/etsy")!,
             success: { credential, response, parameters in
+                print(credential.oauthToken)
+                print(credential.oauthTokenSecret)
+                print(credential.oauthVerifier)
+                print(credential.oauthRefreshToken)
                 self.getEtsyAPIData({
                     completed()
                 })
+            
         },
             failure: { error in
                 print(error.localizedDescription)
@@ -95,6 +100,31 @@ class UserProfile   {
     }
     
     func getEtsyAPIData(_ completed: @escaping DownloadComplete) {
+        
+        let _ = oauthSwift.client.get( "\(URL_BASE)/shops/\(USER_ID)/transactions",
+            success: { response in
+                
+                do {
+                    let myJson = try JSONSerialization.jsonObject(with: response.data, options: .mutableContainers)
+                    if let dict = myJson as? Dictionary<String, AnyObject> {
+                        print(dict)
+                        if let results = dict["results"] as? [Dictionary<String, AnyObject>] {
+                            let userData = results[0]
+                            print(userData)
+                        }
+                    }
+                completed()
+                
+                print("I was allow to transactions")
+                    
+                    
+                } catch let err as NSError {
+                    print(err.debugDescription)
+                }
+                
+        }, failure: { error in
+            print(error)
+        })
         
         
         let _ = oauthSwift.client.get( "\(URL_BASE)/users/\(USER_ID)/profile",
@@ -152,7 +182,7 @@ class UserProfile   {
                 print("\(self.city)")
                 print("\(self.region)")
                 print("\(self.country)")
-                
+              
                 
         },
             failure: { error in
@@ -161,11 +191,12 @@ class UserProfile   {
         })
         
     }
+}
     
- 
+
     
   
-}
+
 
 
 
